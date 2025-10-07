@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kejutan untuk Istriku Tercinta 💖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun, Istriku 💖</title>
   <style>
     body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
       background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
       text-align: center;
-      font-family: "Poppins", sans-serif;
       color: #333;
-      margin: 0;
-      padding: 0;
       overflow-x: hidden;
     }
     h1 {
       color: #ff4f81;
       font-size: 2.5em;
-      margin-top: 1em;
-    }
-    p {
-      font-size: 1.2em;
-      width: 80%;
-      margin: 1em auto;
-      line-height: 1.6em;
+      margin-top: 1.5em;
+      animation: fadeIn 3s ease-in-out;
     }
     img {
-      margin-top: 1em;
-      width: 240px;
+      width: 250px;
+      margin-top: 1.5em;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       animation: fadeIn 3s ease-in-out;
+    }
+    p {
+      font-size: 1.1em;
+      width: 85%;
+      margin: 1.5em auto;
+      line-height: 1.8em;
+      text-align: justify;
+      background: rgba(255,255,255,0.6);
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      animation: slideUp 2s ease-out;
+    }
+    audio {
+      margin-top: 20px;
     }
     .heart {
       position: absolute;
@@ -39,32 +48,51 @@
       animation: floatUp 6s linear infinite;
     }
     @keyframes floatUp {
-      0% {transform: translateY(0) scale(1);}
-      100% {transform: translateY(-800px) scale(1.5); opacity: 0;}
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
     }
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
+    @keyframes slideUp {
+      from {transform: translateY(40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
   </style>
 </head>
 <body>
-  <h1>Selamat Ulang Tahun, Sayangku 💞</h1>
-  <img src="photo.jpg" alt="Foto Kami">
+  <h1>Untuk Istriku yang Paling Kucintai 💕</h1>
+  <img src="photo.jpg" alt="Foto Kita">
   <p>
-    Terima kasih sudah menjadi bagian dari hidupku.  
-    Kamu bukan hanya istriku, tapi juga sahabat, rumah, dan cahaya dalam setiap langkahku.  
-    Aku bersyukur setiap hari karena Allah mempertemukanku denganmu.  
-    Semoga hari ini penuh cinta dan keberkahan untukmu.  
-    Aku mencintaimu, selalu. 💖  
+    Sayang, di hari ulang tahunmu ini aku ingin menyampaikan sesuatu yang mungkin tidak sering aku ucapkan,  
+    tapi selalu aku rasakan setiap hari.  
+    Terima kasih sudah menjadi istri yang begitu sabar, lembut, dan kuat mendampingi hari-hariku.  
+    Bersamamu, rumah yang sederhana pun terasa paling hangat di dunia.  
   </p>
-  <audio controls autoplay loop>
-    <source src="instrumental.mp3" type="audio/mpeg" />
+  <p>
+    Aku tahu, aku bukan suami yang sempurna.  
+    Tapi setiap kali aku melihat senyummu, aku selalu ingin menjadi versi terbaik dari diriku —  
+    bukan karena aku harus, tapi karena kamu pantas mendapatkan yang terbaik.  
+  </p>
+  <p>
+    Terima kasih sudah mencintaiku tanpa syarat,  
+    sudah mau berjalan bersamaku di setiap keadaan,  
+    dan sudah memberiku kebahagiaan terbesar lewat keluarga kecil kita.  
+    Semoga Allah selalu menjaga hatimu, langkahmu, dan setiap mimpi indahmu.  
+  </p>
+  <p>
+    Selamat ulang tahun, cintaku.  
+    Aku mencintaimu hari ini, besok, dan selamanya. 💖  
+  </p>
+
+  <audio autoplay loop>
+    <source src="instrumental.mp3" type="audio/mpeg">
     Browser kamu tidak mendukung pemutar musik.
   </audio>
 
   <script>
-    // efek hati melayang
+    // Efek hati melayang
     function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
