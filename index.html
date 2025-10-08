@@ -51,6 +51,22 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+
+    /* tombol play */
+    #playButton {
+      margin-top: 20px;
+      font-size: 1.1em;
+      padding: 10px 25px;
+      border: none;
+      background-color: #e63970;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #playButton:hover {
+      background-color: #c52d5e;
+    }
   </style>
 </head>
 <body>
@@ -72,10 +88,13 @@
     Aku berjanji akan terus berusaha menjadi suami yang lebih baik,  
     yang membuatmu bahagia, dan selalu menjagamu seperti hari pertama aku jatuh cinta padamu. 💞  
   </p>
-  <audio autoplay loop>
+
+  <audio id="bgm" loop>
     <source src="instrumental.mp3" type="audio/mpeg" />
     Browser kamu tidak mendukung pemutar musik.
   </audio>
+
+  <button id="playButton">🎵 Putar Musik</button>
 
   <script>
     // efek hati melayang lembut
@@ -89,6 +108,15 @@
       setTimeout(() => heart.remove(), 6000);
     }
     setInterval(createHeart, 400);
+
+    // kontrol tombol play
+    const audio = document.getElementById('bgm');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+      audio.play();
+      playButton.style.display = 'none';
+    });
   </script>
 </body>
 </html>
